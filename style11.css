@@ -1,0 +1,117 @@
+/* General Page Style */
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Base Shape Styles */
+.shape {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  width: 150px;
+  height: 60px;
+}
+
+/* Oval Shape */
+.oval {
+  border-radius: 50%;
+}
+
+/* Diamond Shape */
+.diamond {
+  transform: rotate(45deg);
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+}
+.diamond::before {
+  content: attr(class);
+  transform: rotate(-45deg);
+}
+
+/* Hexagon Shape */
+.hexagon {
+  position: relative;
+  width: 120px;
+  height: 60px;
+  background: #e07b29;
+  margin: 20px 0;
+}
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+}
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 30px solid #e07b29;
+}
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 30px solid #e07b29;
+}
+
+/* Trapezoid */
+.trapezoid {
+  border-bottom: 60px solid #7b5b9a;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  height: 0;
+  width: 90px;
+  line-height: 60px;
+}
+.trapezoid-down {
+  border-top: 60px solid #1560ff;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  height: 0;
+  width: 90px;
+}
+
+/* Double Rectangle */
+.double-rectangle {
+  border-left: 10px solid #d9b600;
+  border-right: 10px solid #d9b600;
+  background: #ffe600;
+}
+
+/* Rectangle */
+.rectangle {
+  background: #8b4513;
+}
+
+/* Individual Colors */
+.plan { background: #ff6600; }
+.green { background: #4caf50; }
+.build { color: white; } /* hexagon already orange */
+.test {
+  background: #556b2f;
+  color: white;
+  transform: rotate(45deg);
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+}
+.test span {
+  transform: rotate(-45deg);
+}
+.release { color: white; }
+.deploy { background: #8b4513; }
+.operate { background: #ffd700; color: black; }
+.monitor { color: white; }
