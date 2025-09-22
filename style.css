@@ -1,117 +1,97 @@
-/* General Page Style */
 body {
+  background-color: white;
   font-family: Arial, sans-serif;
-  background: #f5f5f5;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  padding: 30px;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
 }
 
-/* Base Shape Styles */
 .shape {
   color: white;
-  font-weight: bold;
   text-align: center;
-  line-height: 60px;
-  width: 150px;
-  height: 60px;
-}
-
-/* Oval Shape */
-.oval {
-  border-radius: 50%;
-}
-
-/* Diamond Shape */
-.diamond {
-  transform: rotate(45deg);
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
-}
-.diamond::before {
-  content: attr(class);
-  transform: rotate(-45deg);
-}
-
-/* Hexagon Shape */
-.hexagon {
-  position: relative;
+  padding: 20px;
   width: 120px;
-  height: 60px;
-  background: #e07b29;
-  margin: 20px 0;
-}
-.hexagon:before,
-.hexagon:after {
-  content: "";
-  position: absolute;
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
-}
-.hexagon:before {
-  bottom: 100%;
-  border-bottom: 30px solid #e07b29;
-}
-.hexagon:after {
-  top: 100%;
-  width: 0;
-  border-top: 30px solid #e07b29;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-/* Trapezoid */
+.arrow {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+/* Specific shapes and colors */
+
+.circle {
+  border-radius: 50%;
+  background-color: #f57c00;
+}
+
+.oval {
+  border-radius: 50% / 30%;
+  background-color: #43a047;
+}
+
+.hexagon {
+  background-color: #f9a825;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.diamond {
+  background-color: #789262;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
 .trapezoid {
-  border-bottom: 60px solid #7b5b9a;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
-  height: 0;
-  width: 90px;
-  line-height: 60px;
+  background-color: #7e57c2;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
 }
+
 .trapezoid-down {
-  border-top: 60px solid #1560ff;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
-  height: 0;
-  width: 90px;
+  background-color: #1976d2;
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
 }
 
-/* Double Rectangle */
-.double-rectangle {
-  border-left: 10px solid #d9b600;
-  border-right: 10px solid #d9b600;
-  background: #ffe600;
-}
-
-/* Rectangle */
 .rectangle {
-  background: #8b4513;
+  width: 120px;
+  background-color: #8d6e63;
 }
 
-/* Individual Colors */
-.plan { background: #ff6600; }
-.green { background: #4caf50; }
-.build { color: white; } /* hexagon already orange */
-.test {
-  background: #556b2f;
-  color: white;
-  transform: rotate(45deg);
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
+.rectangle.yellow {
+  background-color: #fdd835;
 }
-.test span {
-  transform: rotate(-45deg);
+
+.brown {
+  background-color: #6d4c41;
 }
-.release { color: white; }
-.deploy { background: #8b4513; }
-.operate { background: #ffd700; color: black; }
-.monitor { color: white; }
+
+.gold {
+  background-color: #fbc02d;
+}
+
+.green {
+  background-color: #4caf50;
+}
+
+.orange {
+  background-color: #ef6c00;
+}
+
+.olive {
+  background-color: #8bc34a;
+}
+
+.purple {
+  background-color: #673ab7;
+}
+
+.blue {
+  background-color: #1976d2;
+}
